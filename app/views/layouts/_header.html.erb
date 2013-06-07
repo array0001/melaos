@@ -1,0 +1,57 @@
+	<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/">Melaos</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+          	   <li class="divider-vertical"></li>
+	           <li><%= link_to "Productos",products_path%></li>
+	           <li class="divider-vertical"></li>
+	           <li><%= link_to "Ayuda",help_path%></li>	
+	           <li class="divider-vertical"></li>
+          </ul>
+	<% if ha_iniciado_sesion? %>          
+     	<ul class="nav">  
+  			<li class="dropdown">  
+    			<a href="#"  
+    	   	   	class="dropdown-toggle"  
+         		data-toggle="dropdown">  
+          		Cuenta  
+          		<b class="caret"></b>  
+    			</a>  
+    			<ul class="dropdown-menu">  
+     				<li><%= link_to "Perfil",user_path(usuario_actual) %></li>
+	 				<li><%= link_to "Ajustes",edit_user_path(usuario_actual) %></li>
+	 				<li><%= link_to "Usuarios",users_path %></li>	
+	 				<li><%= link_to "Cerrar sesion",signout_path%></li>
+    			</ul>  
+  			</li>  
+		</ul>  
+	<%else%>
+	 <ul class="nav">
+		<li><%= link_to "Iniciar sesion",signin_path%></li>
+	 </ul>
+	<%end%>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   	<div class="logo">
+	<%= link_to logo, root_path%>
+	<!--Mirar helpers/applicationHelper; se define logo como: image_tagimage_tag("MelaosLogo.png", :alt => "Sample App",:class=>"round")-->
+	</div>
+	
+
+
+
+
+	 				
+	 				
+				

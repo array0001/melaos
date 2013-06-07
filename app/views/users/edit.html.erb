@@ -1,0 +1,50 @@
+<h1 style="text-align: center">Editar Usuario</h1>
+<%= form_for(@user) do |f|%>
+<div align="center">
+ <table class = "formulario" >
+	<tr>
+		
+		<td>
+			<div class ="campos" style="text-align: center">
+				
+	<%= render 'shared/error_messages'%>
+	<div clas="field">
+ 		<%=f.label :nombre%><!--html tag label--><br />
+ 		<%=f.text_field :nombre%>
+ 	</div>		
+ 	
+	<div clas="">
+		<%=f.label :email, "Email"%><br />
+		<%=f.text_field :email%>
+ 	</div>	
+ 	
+ 	<div clas="field">
+		<%=f.label :password, "Contraseña"%><br />
+		<%=f.password_field :password%>
+ 	</div>	
+ 	
+ 	<div clas="field">
+		<%=f.label :password_confimation, "Confirmacion de contraseña"%><br />
+		<%=f.password_field :password_confirmation%><br />
+ 	</div>	
+ 	
+ 	<div clas="actions">
+		<br /><%=f.submit "Actualizar"%>
+ 	</div>	
+ 
+</div>
+</td>
+	     <td style="padding-left: 40px">
+		<div class = "gravatar" >
+			<br /><%= gravatar_for @user , :size => 200 %> <!--ver helper-->
+			<br /><a  style="color: black "  href = "http://gravatar.com/emails"  target=_blank >Cambiar Gravatar</a> 
+	 	</div>	
+	</td>
+
+</tr>
+</table>
+</div>
+<%end%>
+
+
+ 	

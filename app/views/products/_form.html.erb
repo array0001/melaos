@@ -1,0 +1,30 @@
+
+<%= form_for(@product) do |f| %>
+	<%= render 'shared/error_messages_prod'%>
+	<div clas="field">
+		<%=f.label :nombre_producto, "Nombre producto"%><!--html tag label-->
+		<%=f.text_field :nombre_producto%>
+ 	</div>		
+ 	
+	<div clas="field">
+		<%=f.label :descripcion_producto, "Descripcion producto"%>
+		<%=f.text_field :descripcion_producto%>
+ 	</div>	
+ 	
+ 	<div clas="field">
+		<%=f.label :imagen_producto_url, "Imagen URL"%>
+		<%=f.text_field :imagen_producto_url%>
+ 	</div>	
+ 	
+ 	
+ 	<div clas="field">
+		<%=f.label :precio, "Precio"%>
+		<%=f.text_field :precio%>
+ 	</div>	
+ 	
+  <div class="actions">
+	<%= f.submit "Enviar" %>
+  </div>
+
+ 	
+  <% end %>

@@ -1,0 +1,31 @@
+<h1 style="text-align: right">Nuevo Usuario</h1>
+<%= form_for(@user) do |f|%>
+<div class="row" style="text-align: center">
+	<%= render 'shared/error_messages'%>
+	
+ 		<%=f.label :nombre%><!--html tag label--><br />
+ 		<%=f.text_field :nombre%>
+ 	
+ 	
+	
+		<%=f.label :email, "Email"%><br />
+		<%=f.text_field :email%>
+ 
+ 	
+ 	
+		<%=f.label :password, "Contraseña"%><br />
+		<%=f.password_field :password%>
+
+ 	
+ 	
+		<%=f.label :password_confimation, "Confirmacion de contraseña"%><br />
+		<%=f.password_field :password_confirmation%>
+ 	
+ 	
+ 	<div class="actions" >
+		<%=f.submit "Registro"%>
+ 	</div>	
+ 	</div>
+ 	
+<%end%>
+

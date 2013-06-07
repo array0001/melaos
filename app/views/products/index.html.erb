@@ -1,0 +1,58 @@
+
+<h1 style="text-align: right">Productos</h1><br /><br />
+
+<div class="container">
+
+<% @products.each do |product| %>
+  	<div class="span-5">
+  
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');" >
+
+	<div class="flipper">
+		
+		<div class="front" style="text-align:center">
+			
+		  <p><%= image_tag "#{product.imagen_producto_url}", :alt => "#{product.nombre_producto}", :class => "round" %></p><br />
+		
+		  
+		</div>
+		
+		<div class="back" >
+			<div class= "tablaDescripcion">	  
+			  <table>
+			    <tr><b><%= product.nombre_producto %></b></tr><br /><br />
+			    <tr><%= product.descripcion_producto %></tr><br /><br />
+			    <%begin%>
+			    <tr>Precio: <%= product.precio%></tr><br /><br /><br />
+		    	<% if usuario_actual.admin? %>
+				<tr><%= link_to "delete", product, :method => :delete, :confirm => "Esta Seguro?", :title => "Eliminar #{product.nombre_producto}" %>
+				|
+				<%= link_to 'Editar', edit_product_path(product) %></tr><br /><br />
+				<%else%>	
+				<%end%>
+				<%rescue Exception%>
+				<%end%>
+			  </table>
+			 </div>
+		  </div>	
+		  
+		  </div>		
+
+		</div>
+		</div>
+  
+  
+<% end %>
+
+	</div>
+	<%begin%>
+	<% if usuario_actual.admin? %>
+	<p style="text-align: center">
+		<%=link_to 'Nuevo producto', new_product_path%>
+	</p>
+	<%end%>
+	<%rescue Exception%>
+	<%end%>
+
+<br />
+

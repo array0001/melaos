@@ -1,0 +1,22 @@
+<h1 >Iniciar Sesion</h1>
+<!--como no tenemos modelo para las sesiones usaremos Cookies> -->
+
+<%= form_for(:sesion, :url => sesiones_path) do |f|%>
+
+	<div class = "field" style="text-align: center">
+		<%= f.label :email %><br />
+		<%= f.text_field :email%>
+	</div>
+	<div class = "field" style="text-align: center">
+		<%= f.label :password%><br />
+		<%= f.password_field :password%>
+	</div>
+	
+	<div class="actions" style="text-align: center">
+		<br /><%= f.submit "Iniciar sesion" %>
+	</div>
+	
+	
+<%end%>
+
+<p style="text-align: center"><br />¿Nuevo Usuario? <%= link_to "Registrese",registro_path%> </p>

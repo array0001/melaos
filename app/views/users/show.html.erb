@@ -1,0 +1,17 @@
+<h1>Perfil</h1>
+	
+<table class="perfil">
+	<tr>
+		<td class="main">
+			<h2>
+				<%=gravatar_for @user, :size => 50%>
+				<%= @user.nombre %>
+			</h2>			
+		</td>
+		<td class="sidebar round">
+			<strong>Nombre</strong> <%=@user.nombre%><br />			
+		</td>
+	</tr>
+</table>
+
+
