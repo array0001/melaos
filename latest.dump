@@ -1,0 +1,7 @@
+--2013-06-19 01:04:13--  http://'heroku/
+Resolving 'heroku... failed: Unknown host.
+wget: unable to resolve host address `'heroku'
+--2013-06-19 01:04:15--  ftp://pgbackups/url'
+           => `url''
+Resolving pgbackups... failed: Unknown host.
+wget: unable to resolve host address `pgbackups'

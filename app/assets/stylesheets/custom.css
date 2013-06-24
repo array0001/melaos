@@ -19,6 +19,11 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  text-decoration: none;
+}
+
+
 .icono {
   display: inline-block;
   width: 50px;
@@ -40,66 +45,59 @@ a {
 
 /* line 20, ../../vendor/assets/stylesheets/custom.css.scss */
 #myCarousel {
-  width: 630px;
+  width: 800px;
+  height: 400px;
   margin: 0px auto;
 }
 
 /* line 25, ../../vendor/assets/stylesheets/custom.css.scss */
 .container {
-  width: 710px;
+  width: 850px;
 }
-/* line 29, ../../vendor/assets/stylesheets/custom.css.scss */
+
+
+
 body {
   font-size: 80%;
-  opacity:0.80;
+  opacity:0.95;
   width: 100%;
-  padding: 50px;
-  margin: 0px;
-  background-image: url(/assets/backMela.jpg);
+  padding-top: 50px;
+  margin-left:-150px;
+  background-image: url(/assets/backmela2.jpg);
   background-repeat: no-repeat;
   background-attachment:fixed;
-  background-color: #a2cff0;
+  background-color: #8cd0f0;
 }
+
 @media screen and (max-width: 768px) {
-  /* line 40, ../../vendor/assets/stylesheets/custom.css.scss */
   body body {
     padding-top: 0px;
   }
 }
 
-/* line 45, ../../vendor/assets/stylesheets/custom.css.scss */
 
-
-/* line 54, ../../vendor/assets/stylesheets/custom.css.scss */
 section {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   width: 100%;
+  padding: 30px;
   margin-top: 2em;
   font-size: 120%;
-  padding: 30px;
   background: white;
   -webkit-box-shadow: 0px 0px 8px 0px #000000;
   -moz-box-shadow: 0px 0px 8px 0px #000000;
   box-shadow: 0px 0px 8px 0px #000000;
 }
 
-/* line 67, ../../vendor/assets/stylesheets/custom.css.scss */
+
+
+
+
 section h1 {
   font-size: 200%;
   text-align: right;
 }
 
 
-/*links*/
-/* line 74, ../../vendor/assets/stylesheets/custom.css.scss */
-
-
-/* line 85, ../../vendor/assets/stylesheets/custom.css.scss */
-
-
-
-
-/* line 185, ../../vendor/assets/stylesheets/custom.css.scss */
 input:focus {
   outline: none;
   border: 1px solid #7bc1f7;
@@ -108,7 +106,6 @@ input:focus {
   -webkit-box-shadow: 0px 0px 8px #7bc1f7;
 }
 
-/* line 193, ../../vendor/assets/stylesheets/custom.css.scss */
 input[type=text] {
   margin-top: 10px;
   left: 50%;
@@ -121,7 +118,6 @@ input[type=text] {
   border-radius: 4px;
 }
 
-/* line 207, ../../vendor/assets/stylesheets/custom.css.scss */
 input[type=password] {
   margin-top: 10px;
   left: 50%;
@@ -134,7 +130,6 @@ input[type=password] {
   border-radius: 4px;
 }
 
-/* line 221, ../../vendor/assets/stylesheets/custom.css.scss */
 input[type=submit] {
   margin-top: 10px;
   left: 50%;
@@ -147,15 +142,12 @@ input[type=submit] {
   border-radius: 4px;
 }
 
-/*Round corners*/
-/* line 239, ../../vendor/assets/stylesheets/custom.css.scss */
 .round {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* line 245, ../../vendor/assets/stylesheets/custom.css.scss */
 footer {
   text-align: center;
   margin-top: 50px;
@@ -167,15 +159,10 @@ footer {
   box-shadow: 0px 0px 8px 0px #000000;
 }
 
-/* line 257, ../../vendor/assets/stylesheets/custom.css.scss */
-
-
-/* line 264, ../../vendor/assets/stylesheets/custom.css.scss */
 footer nav ul li {
   display: inline-block;
 }
 
-/* line 268, ../../vendor/assets/stylesheets/custom.css.scss */
 footer nav ul li a {
   border-right: 30px solid transparent;
  
@@ -187,37 +174,30 @@ footer nav ul li a:hover {
   color:#006DCC;
 }
 
-/* line 272, ../../vendor/assets/stylesheets/custom.css.scss */
 
-
-/*user show page*/
-/* line 280, ../../vendor/assets/stylesheets/custom.css.scss */
 table.perfil {
   width: 100%;
   margin-bottom: 0;
 }
 
-/* line 287, ../../vendor/assets/stylesheets/custom.css.scss */
+
+
 td.main {
   width: 70%;
-  padding: 1em;
+  padding-left: 30px;
 }
 
-/* line 294, ../../vendor/assets/stylesheets/custom.css.scss */
 td.sidebar {
-  width: 30%;
-  padding: 1em;
-  vertical-align: top;
-  background: #FFF6BF;
+ background:transparent;
+ padding-left:120px;
 }
 
-/* line 301, ../../vendor/assets/stylesheets/custom.css.scss */
+
 .perfil img.gravatar {
   border: 1px solid #999;
   margin-bottom: -15px;
 }
 
-/* line 306, ../../vendor/assets/stylesheets/custom.css.scss */
 ul.usuarios li {
   list-style:none;
 }
@@ -230,7 +210,7 @@ ul.usuarios li {
   -moz-perspective: 1000;
   width: 200px;
   height: 250px;
-  margin-bottom: 10px;
+  margin: 20px;
 }
 
 /* line 323, ../../vendor/assets/stylesheets/custom.css.scss */
@@ -330,7 +310,45 @@ button.css3button {
 		0px 1px 0px rgba(255,255,255,0.2);
 }
 
-a:hover{
-  text-decoration: none;
+	
+.thumb{
+	float:left;
+	padding: 20px;
+	margin-left: -20px;
+	margin-top:-20px;
+	height: 200px;
+	overflow: auto;
 }
+
+.list-Home:hover{
+	background: #eee;
+  	cursor: pointer;
+}
+
+.post{
+	list-style: none;
+	margin: 10px 0 0 0;
+	width: 690px;
+	height: 250px;
+	padding-left: 50px;
+	
+
+}
+
+
+.timestamp{
+	color:#C4C4C4;
+	float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
   	@title = "Melaos"
+  	@post = Post.all
   end
 
   def contacto

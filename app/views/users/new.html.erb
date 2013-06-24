@@ -3,25 +3,25 @@
 <div class="row" style="text-align: center">
 	<%= render 'shared/error_messages'%>
 	
- 		<%=f.label :nombre%><!--html tag label--><br />
+ 		<%=f.label :nombre,"Nombre*"%><!--html tag label-->
  		<%=f.text_field :nombre%>
  	
  	
 	
-		<%=f.label :email, "Email"%><br />
+		<%=f.label :email, "Email*"%>
 		<%=f.text_field :email%>
  
  	
  	
-		<%=f.label :password, "Contraseña"%><br />
+		<%=f.label :password, "Contraseña*"%>
 		<%=f.password_field :password%>
 
  	
  	
-		<%=f.label :password_confimation, "Confirmacion de contraseña"%><br />
+		<%=f.label :password_confimation, "Confirmacion de contraseña*"%>
 		<%=f.password_field :password_confirmation%>
  	
- 	
+ 		<br /><p>* campo requerido.</p>
  	<div class="actions" >
 		<%=f.submit "Registro"%>
  	</div>	

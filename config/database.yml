@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: Melaos_del_valle_test
+  database: Melaos_del_valle_dev
   username: postgres
   password: juanto
   host: localhost
@@ -24,7 +24,7 @@ test:
 
 production:
   adapter: postgresql
-  database: Melaos_del_valle
+  database: Melaos_del_valle_dev
   username: postgres
   password: juanto
   host: localhost

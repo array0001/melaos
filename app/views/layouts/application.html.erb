@@ -12,8 +12,7 @@
 		<!--[if lt IE9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-	 	<script src="http://code.jquery.com/jquery.js"></script>
-    	<script src="js/bootstrap.js"></script>
+	 	
 	</head>
 
 	<body>
@@ -24,11 +23,11 @@
 		 		<% flash.each do |key,value| %>
 		 			<div class = "alert alert-<%= key %>"><%= value %></div>
 		 		<%end%>
-		 		
 		 		<%=yield%>
-		 		
 		 	</section>
+		 
 		 	<%=render 'layouts/footer'%> 
 		 </div>
+		 
  	</body>
 </html>

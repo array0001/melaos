@@ -16,7 +16,7 @@
 
 class User < ActiveRecord::Base
   attr_accessor :password #Virtual atribute for encrypted passwords
-  attr_accessible :email, :nombre, :password, :password_confirmation #crea Getter & Setters de todo lo que sea accesible desde el web
+  attr_accessible :email, :nombre, :password, :password_confirmation, :created_at #crea Getter & Setters de todo lo que sea accesible desde el web
   #si se puede pasar el atributo como parte de un Hash TIENE que ser un atributo accesible.
   
   

@@ -3,6 +3,7 @@
 <ul class="usuarios">
 	<%# i=0 %>
 	<% @users.each do |user|  %>
+	<hr />
 	<li>
 		<%#  if i<= @users.count i+=1 %>
 		<%= gravatar_for user, :size =>30 %>

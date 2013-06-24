@@ -1,10 +1,23 @@
+<table >
+	<tr>
+		
+		<td class="main">
+		<%=render ('Slideshow/carrousel')%>
+	
+		<br />
+		<hr />
+		<br />
+	 	
+	 	<div>
+		 	<ol class="post">
+		 	  <%=render 'posts/post'%>
+		 	</ol> 
+		</div>	
 
-<%=render ('Slideshow/carrousel')%>
-<br />
-<div align="center">
- <a href="/users/new"><button  type="button" class="css3button" >Registro</button></a>
-</div>
-<!--
-	 <p><%=image_tag("strawberry-ice-cream.jpg", :alt => "Melaos",:class=>"round") %></p>
-	 registro_path, en routes cuando se define match se hace con '/registro' -->
-
+		
+		</td>
+		<td class="sidebar"  valign="top">
+			<p><%=link_to(image_tag("Domicilios2.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada"), products_path) %></p>		                       
+		</td>
+	</tr>
+</table>

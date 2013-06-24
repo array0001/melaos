@@ -11,7 +11,7 @@ module ApplicationHelper
   
   
   def logo
-    image_tag("MelaosLogo.png", :alt => "Sample App")
+    image_tag("MelaosLogo2.png", :alt => "Sample App")
   end
   
 

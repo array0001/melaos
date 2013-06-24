@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_filter :admin_user, :only => [:destroy,:edit]
+  before_filter :admin_user, :only => [:destroy,:edit,:new]
   
   # GET /products
   # GET /products.json
@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @product }
     end
+    
   end
 
   # GET /products/1/edit
