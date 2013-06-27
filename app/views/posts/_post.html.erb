@@ -1,21 +1,27 @@
 
 
-	<% if  @post.blank? %>
-		<p>No hay nuevo contenido</p>
-	<%else%>
- 			
-		<% @post.each do |c| %>
-			<li class="list-Home" >
-				<%=link_to(image_tag(c.image, :alt => "",:class => "thumb"),c.ref ) %> 	
-				<h3><%= c.title %></h3>
-				<p><%= c.content %></p>
-				<hr>
-				<span class="timestamp">
-					Publicado: <%= time_ago_in_words(c.created_at)%>
-				</span>
-			</li>
-			<br /><br /><br /><br /><br />
-		<%end%>
- 	
-		 		
+<% if  @post.blank? %>
+<p>No hay nuevo contenido</p>
+<%else%>
+	<% @post.each do |c| %>
+		<li class="list-Home" >
+			<%=link_to(image_tag(c.image, :alt => "",:class => "thumb"),c.ref ) %> 	
+			<h3><%= c.title %></h3>
+			<p><%= c.content %></p>
+			
+			<hr>
+			<span class="timestamp">
+				Publicado: <%= time_ago_in_words(c.created_at)%>
+			</span>
+			<%begin%>
+			<% if usuario_actual.admin? %>
+				<%=	link_to "Eliminar", c, :method => :delete, :confirm => "Eliminar la publicacion?", :title => "Eliminar #{c.title} "%>
+			<%end%>
+			<%rescue Exception%>
+			<%end%>
+		</li>
+		<br /><br /><br /><br /><br />
 	<%end%>
+ 		
+<%end%>
+

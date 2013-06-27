@@ -1,0 +1,27 @@
+<div class="row" style="text-align: center">
+	<table style="margin: auto">
+		<tr >
+		<%=form_for(@npost) do |f|%>
+		
+			<td style="float: left">
+			<%=f.label :title, "Titulo"%>
+			<%=f.text_field :title%>
+		
+			<%=f.label :content, "Contenido"%>
+			<%=f.text_area :content, :size => "10x10"%>
+			
+			</td>
+			<td style="float: right; padding: 20px">
+			<%=f.label :image, "URL imagen"%>
+			<%=f.text_field :image%>
+			
+			<%=f.label :ref, "URL pagina"%>
+			<%=f.text_field :ref%>		
+			<br />
+			<%=f.submit "Publicar"%>
+			</td>
+			
+		<%end%>		
+		</tr>
+	</table>
+</div>

@@ -3,7 +3,7 @@ RailsProjects::Application.routes.draw do
   resources :products
   resources :users #ResT(TODAS LAS REST) URLS this is generating magically creating show action and new action from users
   resources :sesiones,  :only => [:new, :create, :destroy] # limitando las acciones para que se generen los urls
-  
+  resources :posts, :only => [:create, :destroy]
   
   root :to => 'pages#home'
   match '/contacto', :to =>'pages#contacto' #NAME ROUTE! -> contacto_path OR contacto_URL

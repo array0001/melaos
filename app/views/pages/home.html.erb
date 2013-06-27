@@ -14,10 +14,22 @@
 		 	</ol> 
 		</div>	
 
-		
 		</td>
+			
 		<td class="sidebar"  valign="top">
 			<p><%=link_to(image_tag("Domicilios2.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada"), products_path) %></p>		                       
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<%begin%>
+				<% if usuario_actual.admin? %>
+					<%=	render 'posts/form'%>
+				<%end%>
+				<%rescue Exception%>
+				<%end%>
+			
 		</td>
 	</tr>
 </table>

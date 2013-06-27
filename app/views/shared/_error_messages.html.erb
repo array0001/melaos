@@ -1,4 +1,4 @@
-<% if @user.errors.any? %>
+<% if object.errors.any? %>
 	<div id = "error_explanation">
 		<div class = "alert alert-error">
 			<h2>
@@ -6,7 +6,7 @@
 			</h2>
 				<p>Hubo errores en los siguientes campos:</p>
 				<ul>
-					<% @user.errors.full_messages.each do |message| %>
+					<% object.errors.full_messages.each do |message| %>
 						<li><%= message %></li>
 					<%end%>
 				</ul>

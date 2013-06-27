@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
   	@title = "Melaos"
   	@post = Post.all
+  	@npost = Post.new if ha_iniciado_sesion?
   end
 
   def contacto
