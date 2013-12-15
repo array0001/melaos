@@ -30,7 +30,7 @@
 						    <%begin%>
 						    <tr>Precio: <%= product.precio%></tr><br /><br /><br />
 					    	<% if usuario_actual.admin? %>
-							<tr><%= link_to "delete", product, :method => :delete, :confirm => "Esta Seguro?", :title => "Eliminar #{product.nombre_producto}" %>
+							<tr><%= link_to "Borrar", product, :method => :delete, :confirm => "Esta Seguro?", :title => "Eliminar #{product.nombre_producto}" %>
 							|
 							<%= link_to 'Editar', edit_product_path(product) %></tr><br /><br />
 							<%else%>	
