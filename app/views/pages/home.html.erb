@@ -1,35 +1,24 @@
-<table >
-	<tr>
-		
-		<td class="main">
-		<%=render ('Slideshow/carrousel')%>
-	
-		<br />
-		<hr />
-		<br />
-	 	
-	 	<div>
-		 	<ol class="post">
-		 	  <%=render 'posts/post'%>
-		 	</ol> 
-		</div>	
+<%= render ('Slideshow/carrousel')%>
 
-		</td>
-			
-		<td class="sidebar"  valign="top">
-			<p><%=link_to(image_tag("Domicilios2.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada"), products_path) %></p>		                       
-		</td>
-	</tr>
+<br />
+<br />
+<br />
+<%= link_to(image_tag("Domicilios.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada",:class=>"img-responsive round"), products_path) %>
+
+
+<div>
+	<ol class="post">
+		<%= render 'posts/post'%>
+	</ol>
+</div>
+
+
+
 	
-	<tr>
-		<td>
-			<%begin%>
-				<% if usuario_actual.admin? %>
-					<%=	render 'posts/form'%>
-				<%end%>
-				<%rescue Exception%>
-				<%end%>
-			
-		</td>
-	</tr>
-</table>
+<%begin%>
+<% if usuario_actual.admin? %>
+<%= render 'posts/form'%>
+<%end%>
+<%rescue Exception%>
+<%end%>
+

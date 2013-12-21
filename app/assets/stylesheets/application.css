@@ -7,8 +7,121 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require bootstrap
  *= require_self
  *= require_tree .
  * 
  */
+
+
+
+body{
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	background-image: url(/assets/backmelawhite3.jpg);
+	background-repeat: no-repeat;
+  	background-attachment:fixed;
+}
+
+.navbar{
+	font-size:120%;
+}
+
+.container{
+	font-size:80%;
+}
+
+.navbar-nav{
+	padding-left:130px;
+	font-size:135%;
+}
+
+.navbar-brand{
+    
+    font-size:130%;
+}
+
+h1{
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+h2{
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+h3{
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+h4{
+	font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+.logo{
+	width: 100%;
+}
+
+.item img{
+	width: 100%;
+
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+
+.navbar.navbar-default.navbar-fixed-bottom{
+	/*background-color:#222222;*/
+	bottom:-9px;
+}
+
+footer{
+	font-size:150%;
+}
+
+a.btn.btn-default{
+	color:#269ABC;
+ background-color:transparent;
+ border-color:transparent;
+ width:26%;
+ height:30px;
+}
+
+img.btn.btn-default{
+	display:inline-block;
+}
+

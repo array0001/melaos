@@ -1,11 +1,10 @@
-<footer >
-	<nav class = "round">
-	<ul>
-		<li><%=link_to "Conócenos",about_path%></li>
-		<li><%=link_to "Melaos",root_url%></li>
-		<li><%=link_to "Contacto",contacto_path%></li>
-		<li><%=image_tag("facebook-4-512.png", :alt => "Sample App",:class=>"icono")%></li>
-		<li><%=image_tag("twitter-4.png", :alt => "Sample App",:class=>"icono")%></li>
-	</ul>
+<footer>
+	<nav class = "btn-group-justified">
+		<%=link_to "Conócenos",about_path,:class=>"btn btn-default"%>
+		<%=link_to "Melaos",root_url,:class=>"btn btn-default"%>
+		<%=link_to "Contacto",contacto_path,:class=>"btn btn-default"%>
+		<%=image_tag("facebook36.png", :alt => "Sample App",:class=>"pull-right")%>
+		<%=image_tag("twitter-36.png", :alt => "Sample App",:class=>"pull-right")%>
 	</nav>
+	
 </footer>
