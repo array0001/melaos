@@ -24,22 +24,28 @@ body{
   	background-attachment:fixed;
 }
 
-.navbar{
-	font-size:120%;
+.navbar-nav li a:hover{
+	
 }
 
-.container{
-	font-size:80%;
+hr{
+	visibility: hidden;
 }
 
 .navbar-nav{
-	padding-left:130px;
-	font-size:135%;
+	border-color:#222222;
+	font-size:120%;
+
 }
 
 .navbar-brand{
-    
+    margin-right:20px;
     font-size:130%;
+    
+}
+
+.fb-like-box{
+	height:500px;
 }
 
 h1{
@@ -123,5 +129,9 @@ a.btn.btn-default{
 
 img.btn.btn-default{
 	display:inline-block;
+}
+
+.thumbnail{
+	height:400px;
 }
 

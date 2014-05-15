@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def logo
-    image_tag("MelaosLogo.png", :alt => "Melaos Del Valle", :class => "img-responsive")
+    image_tag("MelaosLogo3.png", :alt => "Melaos Del Valle", :class => "img-responsive")
   end
 
 end

@@ -1,72 +1,50 @@
-<table >
-	<tr>
-		
-		<td class="main">
-			
-			<h1 style="text-align:center">Productos</h1><br /><br />
-			
-			<div class="container">
-			
-			<% @products.each do |product| %>
-			  	<div class="span-1">
-			  
-			  <div class="flip-container" ontouchstart="this.classList.toggle('hover');" >
-			
-				<div class="flipper">
-					
-					<div class="front" style="text-align:center">
-						
-					  <p><%= image_tag "#{product.imagen_producto_url}", :alt => "#{product.nombre_producto}", :class => "round" %></p><br />
-					
-					
-					  
-					</div>
-					
-					<div class="back" >
-						<div class= "tablaDescripcion">	  
-						  <table>
-						    <tr><b><%= product.nombre_producto %></b></tr><br /><br />
-						    <tr><%= product.descripcion_producto %></tr><br /><br />
-						    <%begin%>
-						    <tr>Precio: <%= product.precio%></tr><br /><br /><br />
-					    	<% if usuario_actual.admin? %>
-							<tr><%= link_to "Borrar", product, :method => :delete, :confirm => "Esta Seguro?", :title => "Eliminar #{product.nombre_producto}" %>
-							|
-							<%= link_to 'Editar', edit_product_path(product) %></tr><br /><br />
-							<%else%>	
-							<%end%>
-							<%rescue Exception%>
-							<%end%>
-						  </table>
-						 </div>
-					  </div>	
-					  
-					  </div>		
-			
-					</div>
-					</div>
-			  
-			  
-			<% end %>
-			
-			
-			
-				</div>
-				<%begin%>
-				<% if usuario_actual.admin? %>
-				<p style="text-align: center">
-					<%=link_to 'Nuevo producto', new_product_path%>
-				</p>
-				<%end%>
-				<%rescue Exception%>
-				<%end%>
-			
-			<br />
-			
-				</td>
-		<td class="sidebar"  valign="top">
-			<p><%=image_tag("otrosProdSide.png", :alt => "Otros Productos")%></p>
-			<p><%=image_tag("Domicilios2.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada")%></p>		                       
-		</td>
-	</tr>
-</table>
+<div class="page-header">
+  <h1>Productos<small>  100% del valle</small></h1>
+</div>
+
+<div class="row">
+	<% @products.each do |product| %>
+	<div class="col-4 col-sm-6 col-lg-3">
+		  <div class=" thumbnail caption">
+        		<h2><p>
+			<%= product.nombre_producto%></p>
+</h2>
+		<p>
+			<%= image_tag "#{product.imagen_producto_url}", :alt => "#{product.nombre_producto}", :class => "img-thumbnail" %>
+		</p>
+
+		<p class="minimize">
+			<%= product.descripcion_producto %>
+				Precio: <%= product.precio%>
+		</p>
+		</div>
+		<%begin%>
+
+		<% if usuario_actual.admin? %>
+		<p>
+			<%= link_to "Borrar", product, :method => :delete, :confirm => "Esta Seguro?", :title => "Eliminar #{product.nombre_producto}" %>
+			|
+			<%= link_to 'Editar', edit_product_path(product) %>
+		</p>
+		<%else%>
+		<%end%>
+		<%rescue Exception%>
+		<%end%>
+
+	</div><!--/span-->
+
+	<% end %>
+</div>
+
+<%begin%>
+<% if usuario_actual.admin? %>
+<p style="text-align: center">
+	<%= link_to 'Nuevo producto', new_product_path%>
+</p>
+<%end%>
+<%rescue Exception%>
+<%end%>
+
+
+
+

@@ -4,7 +4,7 @@
 	<head>
 		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-		
+
 		<%= render ('layouts/stylesheets')%>
 		<%= csrf_meta_tag %>
 		<title><%= title%></title>
@@ -17,45 +17,26 @@
 	</head>
 
 	<body>
+
+		<div id="fb-root"></div>
+
 		<div class="container">
 
 			<%= render 'layouts/header'%>
-			<div class = "row row-offcanvas row-offcanvas-right">
-				<button type="button" class="btn btn-primary visible-xs pull-right" data-toggle="offcanvas">
-					Ver más
-				</button>
-				<div class="col-xs-12 col-sm-9">
-					<% flash.each do |key,value| %>
+			
+				<% flash.each do |key,value| %>
 					<div class = "alert alert-<%= key %>">
 						<%= value %>
 					</div>
 					<%end%>
 					<%= yield%>
-
-				</div>
-
-				<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-					<div class="well">
 			
-					</div>
-				</div>
 
-			</div>
 
-			<div class = "navbar navbar-default navbar-fixed-bottom">
-				<div class = "container foot">
-					<%= render 'layouts/footer'%>
-				</div>
-			</div>
-
-		</div>
 		
-		
-		
-		<script src="//code.jquery.com/jquery.js"></script>	
+		<script src="//code.jquery.com/jquery.js"></script>
 		<%= javascript_include_tag "application"%>
-	
+
 	</body>
 </html>
-
 

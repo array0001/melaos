@@ -1,24 +1,50 @@
-<%= render ('Slideshow/carrousel')%>
+<div class = "row row-offcanvas row-offcanvas-right">
+	<button type="button" class="btn btn-primary visible-xs pull-right" data-toggle="offcanvas">
+		Ver más
+	</button>
+	<div class="col-xs-12 col-sm-9">
+		<%= render ('Slideshow/carrousel')%>
 
-<br />
-<br />
-<br />
-<%= link_to(image_tag("Domicilios.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada",:class=>"img-responsive round"), products_path) %>
+		<br />
+		<br />
+		<br />
+		<%= link_to(image_tag("Domicilios.png", :alt => "Domicilios Medellin: 2354144 Area de entrega limitada",:class=>"img-responsive round"), products_path) %>
 
+		<div>
+			<ol class="post">
+				<%= render 'posts/post'%>
+			</ol>
+		</div>
 
-<div>
-	<ol class="post">
-		<%= render 'posts/post'%>
-	</ol>
+		<%begin%>
+		<% if usuario_actual.admin? %>
+		<%= render 'posts/form'%>
+		<%end%>
+		<%rescue Exception%>
+		<%end%>
 </div>
-
-
+		<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/Melaos-del-Valle/1441049686107303" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+		</div>
 
 	
-<%begin%>
-<% if usuario_actual.admin? %>
-<%= render 'posts/form'%>
-<%end%>
-<%rescue Exception%>
-<%end%>
 
+	<div class = "navbar navbar-default navbar-fixed-bottom">
+		<div class = "container foot">
+			<%= render 'layouts/footer'%>
+		</div>
+	</div>
+
+</div>
+
+<script>
+			( function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id))
+						return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+		</script>
