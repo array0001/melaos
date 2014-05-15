@@ -6,10 +6,12 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @title = "Productos"
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @products }
-    end
+    redirect_to  '/maintenance.html'
+    # Descomentar para volver a mostrar pagina de Productos
+    #respond_to do |format|
+    #  format.html # index.html.erb
+    #  format.json { render json: @products }
+    #end
   end
 
   # GET /products/1

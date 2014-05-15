@@ -12,9 +12,11 @@ RailsProjects::Application.routes.draw do
   match '/registro',:to =>'users#new' 
   match '/signin', :to => 'sesiones#new'
   match '/signout', :to => 'sesiones#destroy' #ver 9:sessionss-9:29
+  match '/products', :to => redirect('pages#home')
   #match '/users/:id'  => "users#show"
   #match '/users', :to => 'users#'
   
+
   get "pages/home"
   get "pages/contacto"
   get "pages/about"
